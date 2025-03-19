@@ -1,0 +1,30 @@
+# python
+__pycache__/
+*.pyc
+
+# jupyter
+.ipynb_checkpoints/
+
+# Log files
+logs/
+*.log
+
+# Data directories
+data/datasets/
+data/metadata/
+local_outputs/
+
+*egg*/
+
+# Environments
+.env
+
+# Temporary files
+*.tmp
+*.temp
+
+# VS code
+.vscode/
+
+# pytest
+.pytest_cache

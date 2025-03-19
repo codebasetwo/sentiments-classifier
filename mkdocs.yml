@@ -1,0 +1,19 @@
+site_name: Sentiment Classifer
+repo_url: https://github.com/codebasetwo/sentiments/
+nav:
+  - Home: index.md
+  - sentiments:
+    - pro_data: sentiments/pro_data.md
+    - model: sentiments/model.md
+    - train: sentiments/train.md
+    - tuner: sentiments/tuner.md
+    - evaluation: sentiments/evaluation.md
+    - predict: sentiments/predict.md
+    - server: sentiments/server.md
+    - utils: sentiments/utils.md
+    - config: sentiments/config.md
+theme: readthedocs
+plugins:
+  - mkdocstrings
+watch:
+  - .  # reload docs for any file changes
