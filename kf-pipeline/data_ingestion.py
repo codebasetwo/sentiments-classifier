@@ -1,4 +1,4 @@
-# flake8: noqa:  F841
+# flake8: noqa: F841
 import kfp.compiler
 from kfp import dsl, local
 

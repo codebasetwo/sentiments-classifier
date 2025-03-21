@@ -1,5 +1,5 @@
 site_name: Sentiment Classifer
-repo_url: https://github.com/codebasetwo/sentiments/
+repo_url: https://github.com/codebasetwo/sentiments-classifier/
 nav:
   - Home: index.md
   - sentiments:

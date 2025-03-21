@@ -1,6 +1,6 @@
 # Run unit tests for your Python application with bash script
 
-name: sentiment-workloads.
+name: sentiment-workloads
 on:
   # Triggers the workflows on push and pull
   push:
@@ -45,3 +45,7 @@ jobs:
         run: |
           chmod +x deploy/jobs/workloads.sh
           ./deploy/jobs/workloads.sh
+      -
+        name: Run service
+        run: |
+          python ./deploy/services/server.py
