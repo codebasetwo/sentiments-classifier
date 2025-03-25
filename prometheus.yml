@@ -1,0 +1,35 @@
+# Global config
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+# Alert_configsmanager configuration
+alerting:
+  alert_configsmanagers:
+    - static_configs:
+        - targets:
+          - localhost:9093
+
+# Load rules once and periodically evaluate them.
+rule_files:
+  - "alert_configs/rules_cpu_load.yml"
+  - "alert_configs/rules_instance_down.yml"
+  - "alert_configs/rules_oom.yml"
+  - "alert_configs/rules_ood.yml"
+
+# A scrape configuration of two jobs prometheus and fastapi-server.:
+scrape_configs:
+  # Scrape Prometheus itself.
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  # Scrape FastAPI server.
+  - job_name: fastapi-server
+    static_configs:
+      - targets: ["localhost:8000"]
+
+  # Scrape Node Exporter.
+  - job_name: node
+    static_configs:
+    - targets: ['localhost:9100']

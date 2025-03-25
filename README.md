@@ -270,3 +270,39 @@ pytest --trainset-loc=$DATASET_LOC --valset-loc=$VAL_LOC tests/code --verbose --
 echo "Running tests for models..."
 pytest --experiment-name=$EXPERIMENT_NAME tests/models --verbose --disable-warnings | tee
 ```
+
+### Monitoring
+
+After we have trained, evaluated and tested our code and model, we are most times only 50% done. A lot of work is still be done when we deploy our model to production. A ML is a very experimental field. Unlike traditional software engineering, ML will suffer from degradation over time as a solution was generated from data which was used to derive a probabilistic solution. <br>
+We have to monitor system health, latency, rps and other metrics. Integrating prometheus with your server helps capture these metrics.
+
+1. download and install prometheus [here](https://prometheus.io/download/)
+2. download and install prometheus alertmanager [here](https://prometheus.io/download/)
+3. download and install prometheus node_exporter [here](https://prometheus.io/download/)
+
+You can put in you path if you are on windows or put them in your binaries part on a unix system to be able yo call them from anywhere.
+You can then start all servers.
+```bash
+alertmanager
+node_exporter
+prometheus --config.file=prometheus.yml
+# Then you can start your server
+python3 src/sentiments/server.py
+```
+
+### Visualizing
+After having a way to monitor your server it will be nice to visualize them. This helps sp that metrics can easily and speedily be interpreted. for this we use grafana server to do that. <br>
+You can get grafana [here](https://grafana.com/grafana/download), follow the steps to install.
+```bash
+#
+# Start the grafana server
+./grafana server
+# or put in path to access it
+grafana server
+# You can now create your dashboards.
+```
+
+Although just mornitoring these metrics tells us nothing about the state of our Model. So we also have to monitor model performance which can be our evaluation metrics (accuracy, precision, etc.) or key business metrics. Since our model was developed with data. with change in our world data also changes. we can measure
+1. data drift
+2. concept drift
+3. target drift.

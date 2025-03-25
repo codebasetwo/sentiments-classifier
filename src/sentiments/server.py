@@ -3,11 +3,19 @@ from typing import Optional
 
 import uvicorn
 from fastapi import FastAPI
+from fastapi.responses import Response
+from prometheus_client import CONTENT_TYPE_LATEST, REGISTRY, generate_latest
 from pydantic import BaseModel
 
 from sentiments import evaluation, predict
+from sentiments.monitor_prom_middleware import (
+    monitor_requests,
+    update_system_metrics,
+)
 
 app = FastAPI(title="Sentiment-Classifier")
+
+app.middleware("http")(monitor_requests)
 
 
 class PredictionRequest(BaseModel):
@@ -30,7 +38,7 @@ class EvaluationRequest(BaseModel):
 def home():
     """Health check"""
     print(
-        "Congratulations! Your API is working as expected. Now head over to http://localhost:8000/docs."
+        "API working as expected. Now head over to http://localhost:8000/docs."
     )
     response = {
         "message": HTTPStatus.OK.phrase,
@@ -63,6 +71,12 @@ async def _evaluate(request: EvaluationRequest):
         result_path=request.result_fp,
     )
     return {"result": metrics}
+
+
+@app.get("/metrics")
+async def metrics():
+    update_system_metrics()
+    return Response(generate_latest(REGISTRY), media_type=CONTENT_TYPE_LATEST)
 
 
 if __name__ == "__main__":

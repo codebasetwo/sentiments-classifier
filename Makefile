@@ -17,3 +17,4 @@ clean: style
 	find . | grep -E ".pytest_cache" | xargs rm -rf
 	find . | grep -E ".ipynb_checkpoints" | xargs rm -rf
 	rm -rf .coverage*
+	find data/ -mindepth 1 -maxdepth 1 ! -name 'datasets' ! -name 'metadata' -exec rm -rf {} +
