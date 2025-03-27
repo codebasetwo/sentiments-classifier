@@ -6,7 +6,7 @@ Welcome to the documentation for the **Sentiment Classification Project**! This 
 
 ## Project Overview
 
-The goal of this project is to develop a robust and scalable system for classifying src/sentiments from sentences into 6 categories which are "negative", "neutral", "positive"  . The project includes the following key components:
+The goal of this project is to develop a robust and scalable system for classifying sentiments from sentences into 6 categories which are "negative", "neutral", "positive"  . The project includes the following key components:
 
 1. **Data Preparation**: Loading, preprocessing, and splitting the dataset.
 2. **Model Training**: Training a deep learning model (e.g., BERT-based) on the preprocessed data.
@@ -22,15 +22,15 @@ The goal of this project is to develop a robust and scalable system for classify
 
 The documentation is organized into the following sections:
 
-- **[Configuration](src/sentiments/config.md)**: Details about project configuration, including paths, hyperparameters, and environment setup.
-- **[Data](src/sentiments/pro_data.md)**: Information about data loading, preprocessing, and splitting.
-- **[Training](src/sentiments/train.md)**: Documentation for model training, including loss functions, optimizers, and callbacks.
-- **[Hyperparameter Tuning](src/sentiments/tuner.md)**: Guide to tuning model hyperparameters using Hyperopt.
-- **[Prediction](src/sentiments/predict.md)**: How to generate predictions using the trained model.
-- **[Evaluation](src/sentiments/evaluate.md)**: Metrics and methods for evaluating model performance.
-- **[Model](src/sentiments/model.md)**: Details about the model architecture and implementation.
-- **[Serving](src/sentiments/server.md)**: Instructions for deploying the model for inference.
-- **[Utilities](src/sentiments/utils.md)**: Helper functions and utilities used throughout the project.
+- **[Configuration](sentiments/config.md)**: Details about project configuration, including paths, hyperparameters, and environment setup.
+- **[Data](sentiments/pro_data.md)**: Information about data loading, preprocessing, and splitting.
+- **[Training](sentiments/train.md)**: Documentation for model training, including loss functions, optimizers, and callbacks.
+- **[Hyperparameter Tuning](sentiments/tuner.md)**: Guide to tuning model hyperparameters using Hyperopt.
+- **[Prediction](sentiments/predict.md)**: How to generate predictions using the trained model.
+- **[Evaluation](sentiments/evaluation.md)**: Metrics and methods for evaluating model performance.
+- **[Model](sentiments/model.md)**: Details about the model architecture and implementation.
+- **[Serving](sentiments/server.md)**: Instructions for deploying the model for inference.
+- **[Utilities](sentiments/utils.md)**: Helper functions and utilities used throughout the project.
 
 ---
 
@@ -65,7 +65,7 @@ I welcome contributions to this project! If you'd like to contribute, please fol
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/codebasetwo/src/sentiments/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/codebasetwo/sentiments/LICENSE) file for details.
 
 ---
 
@@ -74,8 +74,8 @@ This project is licensed under the MIT License. See the [LICENSE](https://github
 For questions or feedback, please contact:
 
 - **Mail**: [codebasetwo](mailto:codebasetwo@gmail.com)
-- **Project Repository**: [GitHub Repository](https://github.com/codebasetwo/src/sentiments)
+- **Project Repository**: [GitHub Repository](https://github.com/codebasetwo/sentiments)
 
 ---
 
-Thank you for using the src/sentiments Classification Project! We hope this documentation helps you understand and utilize the project effectively.
+Thank you for using the sentiments Classification Project! We hope this documentation helps you understand and utilize the project effectively.

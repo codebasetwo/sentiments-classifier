@@ -33,7 +33,6 @@ jobs:
 
     - name: Cache pip dependencies
       uses: actions/cache@v3
-      id: pip-cache
       with:
         path: ${{ steps.pip-cache.outputs.dir }}
         key: pip-${{ runner.os }}-${{ hashFiles('requirements.txt') }}

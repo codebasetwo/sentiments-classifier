@@ -1,14 +1,14 @@
 on:
   workflow_dispatch:
-  inputs:
-      branch:
-        description: 'Branch to run the workflow on'
-        required: true
-        default: 'main'
-      paths:
-        description: 'Paths to trigger the workflow on'
-        required: true
-        default: 'src/sentiments/**'
+    inputs:
+        branch:
+          description: 'Branch to run the workflow on'
+          required: true
+          default: 'main'
+        paths:
+          description: 'Paths to trigger the workflow on'
+          required: true
+          default: 'src/sentiments/**'
 
 # Permissions
 permissions: write-all

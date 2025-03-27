@@ -1,2 +1,2 @@
 # docs/sentiments/config.md
-::: sentiments.config
+::: src.sentiments.config
