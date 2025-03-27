@@ -12,4 +12,4 @@ jobs:
       # Serve model
       - name: Serve model
         run: |
-          python3 deploy/services/server.py
+          python3 ./deploy/services/server.py
