@@ -19,3 +19,5 @@ jobs:
       # Deploy docs
       - name: Deploy documentation
         run: mkdocs gh-deploy --force
+        env:
+          GH_TOKEN: ${{ secrets.PAGES_SENTIMENT }}
