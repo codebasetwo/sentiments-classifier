@@ -1,0 +1,45 @@
+on:
+  workflow_dispatch:
+  inputs:
+      branch:
+        description: 'Branch to run the workflow on'
+        required: true
+        default: 'main'
+      paths:
+        description: 'Paths to trigger the workflow on'
+        required: true
+        default: 'src/sentiments/**'
+
+# Permissions
+permissions: write-all
+
+# Jobs
+jobs:
+  workloads:
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        shell: bash
+        working-directory: .
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+        # Install required dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+        # Make the script executable and run it
+      - name: Execute workloads
+        run: |
+          chmod +x deploy/jobs/workloads.sh
+          ./deploy/jobs/workloads.sh

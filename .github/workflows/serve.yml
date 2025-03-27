@@ -1,0 +1,15 @@
+name: serve
+on:
+  push:
+    branches:
+    - main
+permissions: write-all
+
+jobs:
+  serve:
+    runs-on: ubuntu-22.04
+    steps:
+      # Serve model
+      - name: Serve model
+        run: |
+          python3 deploy/services/server.py
