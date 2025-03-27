@@ -1,2 +1,2 @@
 # docs/sentiments/predict.md
-::: sentiments.predict
+::: src.sentiments.predict

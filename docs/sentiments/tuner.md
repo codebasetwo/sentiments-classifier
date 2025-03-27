@@ -1,2 +1,2 @@
 # docs/sentiments/tuner.md
-::: sentiments.tuner
+::: src.sentiments.tuner

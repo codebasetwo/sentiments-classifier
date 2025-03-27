@@ -1,2 +1,2 @@
 # docs/sentiments/train.md
-::: sentiments.train
+::: src.sentiments.train

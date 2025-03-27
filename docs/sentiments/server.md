@@ -1,2 +1,2 @@
 # docs/sentiments/server.md
-::: sentiments.server
+::: src.sentiments.server

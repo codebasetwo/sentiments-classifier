@@ -1,2 +1,2 @@
 # docs/sentiments/utils.md
-::: sentiments.utils
+::: src.sentiments.utils

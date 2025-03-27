@@ -1,2 +1,2 @@
 # docs/sentiments/model.md
-::: sentiments.model
+::: src.sentiments.model

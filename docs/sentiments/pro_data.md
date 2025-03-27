@@ -1,2 +1,2 @@
 # docs/sentiments/pro_data.md
-::: sentiments.pro_data
+::: src.sentiments.pro_data

@@ -1,2 +1,2 @@
 # docs/sentiments/evalaution.md
-::: sentiments.evaluation
+::: src.sentiments.evaluation
