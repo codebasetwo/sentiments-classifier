@@ -1,8 +1,11 @@
 name: documentation
 on:
-  push:
-    branches:
-    - main
+  workflow_dispatch:
+    inputs:
+      branch:
+          description: 'Branch to run the workflow on'
+          required: true
+          default: 'main'
 
 jobs:
   build-docs:
@@ -19,5 +22,3 @@ jobs:
       # Deploy docs
       - name: Deploy documentation
         run: mkdocs gh-deploy --force
-        env:
-          GH_TOKEN: ${{ secrets.PAGES_SENTIMENT }}
